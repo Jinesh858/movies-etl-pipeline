@@ -1,14 +1,38 @@
-# Movies ETL Pipeline
+# Movies ETL Pipeline 🎬
 
 A Python-based ETL pipeline that:
-- Extracts data from a CSV of top movies
-- Transforms data (runtime parsing, type conversions)
-- Loads into a PostgreSQL database
-- Runs analysis queries with pretty-printed results
+
+- **Extracts** data from a CSV file containing top movies
+- **Transforms** data (runtime parsing, type conversions, data cleaning)
+- **Loads** data into a PostgreSQL database
+- **Analyzes** data with queries and pretty-printed results
+
+---
+
+## Features
+
+- Easy-to-use command-line interface
+- Custom SQL query support
+- Modular and reusable Python code
+
+---
+
+## Requirements
+
+- Python 3.8+
+- PostgreSQL
+- Python libraries: `pandas`, `psycopg2`, etc.
+
+---
 
 ## Usage
 
 ```bash
-python movies_pipeline.py --file movies.csv        # Load data
-python movies_pipeline.py --analyze                # Run analysis
-python movies_pipeline.py --custom "<SQL Query>"   # Custom SQL
+# Load data from CSV into PostgreSQL
+python movies_pipeline.py --file movies.csv        
+
+# Run predefined analysis queries
+python movies_pipeline.py --analyze                
+
+# Run a custom SQL query
+python movies_pipeline.py --custom "<SQL Query>"  
